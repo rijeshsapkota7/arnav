@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arnav Chel — Cyber-Tech &amp; AI Innovator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Kalam:wght@400;700&family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --slate-bg: #F1F5F9;
+    --slate-card: #FFFFFF;
+    --navy-dark: #0F172A;
+    --navy-muted: #475569;
+    --accent-sky: #0284C7;
+    --accent-sky-dark: #0369A1;
+    --emerald-green: #10B981;
+    --purple-neon: #8B5CF6;
+    --border-light: rgba(15, 23, 42, 0.08);
+    --shadow-soft: 0 12px 32px -8px rgba(15, 23, 42, 0.06);
+    --shadow-hover: 0 20px 40px -12px rgba(2, 132, 199, 0.15);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--slate-bg);
+    color: var(--navy-dark);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .heading-font {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.025em;
+    line-height: 1.12;
+  }
+
+  code, pre, .mono-font {
+    font-family: 'Fira Code', monospace;
+  }
+
+  .note-handwritten {
+    font-family: 'Kalam', cursive;
+    color: var(--accent-sky-dark);
+    font-size: 1.15rem;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; }
+  img { max-width: 100%; display: block; }
+
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- FLOATING COMMAND NAVBAR ---------- */
+  header {
+    position: sticky;
+    top: 16px;
+    z-index: 100;
+    margin-bottom: 20px;
+  }
+
+  nav.nav-dock {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border-light);
+    border-radius: 100px;
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+  }
+
+  .nav-pills {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-pills a {
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--navy-muted);
+    transition: all 0.2s ease;
+  }
+
+  .nav-pills a:hover {
+    color: var(--navy-dark);
+    background: var(--slate-bg);
+  }
+
+  /* ---------- HERO (FIT PERFECTLY IN FULL HEIGHT) ---------- */
+  .hero-tech {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    padding: 20px 0 40px;
+  }
+
+  /* ---------- BUTTONS ---------- */
+  .btn-tech {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+  }
+
+  .btn-sky {
+    background: var(--accent-sky);
+    color: #FFFFFF;
+    box-shadow: 0 8px 20px -4px rgba(2, 132, 199, 0.35);
+  }
+
+  .btn-sky:hover {
+    background: var(--accent-sky-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -4px rgba(2, 132, 199, 0.45);
+  }
+
+  .btn-ghost {
+    background: var(--slate-card);
+    color: var(--navy-dark);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--accent-sky);
+    color: var(--accent-sky);
+    transform: translateY(-2px);
+  }
+
+  /* ---------- HERO (OPPOSITE LAYOUT: LEFT CONTENT, RIGHT TECH TERMINAL + PHOTO) ---------- */
+  .hero-tech {
+    padding: 40px 0 70px;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: var(--emerald-green);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--emerald-green);
+    box-shadow: 0 0 10px var(--emerald-green);
+  }
+
+  .hero-tech h1 {
+    font-size: 3.4rem;
+    color: var(--navy-dark);
+    margin-bottom: 16px;
+  }
+
+  .hero-tech h1 span {
+    color: var(--accent-sky);
+  }
+
+  .hero-lead {
+    font-size: 1.12rem;
+    color: var(--navy-muted);
+    margin-bottom: 28px;
+    max-width: 560px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* TECH TERMINAL DECK (RIGHT COLUMN) */
+  .deck-card {
+    background: var(--navy-dark);
+    border-radius: 24px;
+    padding: 24px;
+    color: #F8FAFC;
+    box-shadow: 0 24px 48px -12px rgba(15, 23, 42, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .deck-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .dots { display: flex; gap: 6px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .d-red { background: #EF4444; }
+  .d-yellow { background: #F59E0B; }
+  .d-green { background: #10B981; }
+
+  .deck-title {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    color: var(--accent-sky);
+  }
+
+  .deck-photo-wrap {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    padding: 14px;
+    margin-bottom: 16px;
+  }
+
+  .deck-photo-wrap img {
+    width: 72px;
+    height: 72px;
+    border-radius: 14px;
+    object-fit: cover;
+  }
+
+  .deck-user-info h4 {
+    color: #FFF;
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+
+  .deck-user-info p {
+    color: var(--accent-sky);
+    font-size: 0.85rem;
+    font-family: 'Fira Code', monospace;
+  }
+
+  .terminal-box {
+    background: #070A11;
+    border-radius: 12px;
+    padding: 14px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+  }
+
+  .term-line {
+    color: #94A3B8;
+    margin-bottom: 6px;
+  }
+
+  .term-line .highlight { color: var(--emerald-green); }
+  .term-line .cmd { color: var(--accent-sky); }
+
+  .term-input-line {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .term-prompt { color: var(--purple-neon); font-weight: 700; }
+
+  .term-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-family: inherit;
+    font-size: inherit;
+    width: 100%;
+  }
+
+  /* ---------- SECTION HEADER ---------- */
+  .section-badge {
+    display: inline-block;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--accent-sky);
+    background: rgba(2, 132, 199, 0.1);
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 8px;
+  }
+
+  .section-head {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+
+  .section-head h2 {
+    font-size: 2.3rem;
+    color: var(--navy-dark);
+    margin-bottom: 8px;
+  }
+
+  .section-head p {
+    color: var(--navy-muted);
+    font-size: 1.05rem;
+  }
+
+  /* ---------- SECTION 2: BENTO GRID PROJECTS (COMPLETELY NEW CONCEPT!) ---------- */
+  #projects {
+    padding: 80px 0;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .bento-card {
+    background: var(--slate-card);
+    border: 1px solid var(--border-light);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .bento-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(2, 132, 199, 0.3);
+  }
+
+  .bento-card.featured {
+    grid-column: span 2;
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+  }
+
+  .bento-tag {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent-sky-dark);
+    margin-bottom: 12px;
+  }
+
+  .bento-card h3 {
+    font-size: 1.5rem;
+    color: var(--navy-dark);
+    margin-bottom: 10px;
+  }
+
+  .bento-card p {
+    color: var(--navy-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .bento-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-light);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy-muted);
+  }
+
+  /* ---------- SECTION 3: LIVE CODE RUNNER LAB (UNIQUE FEATURE!) ---------- */
+  #lab {
+    padding: 80px 0;
+    border-top: 1px solid var(--border-light);
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  .lab-box {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 24px;
+    background: var(--navy-dark);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 20px 48px -12px rgba(15, 23, 42, 0.2);
+  }
+
+  .editor-pane {
+    background: #0B0F17;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+
+  .editor-header {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 12px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .editor-title {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    color: var(--accent-sky);
+  }
+
+  .btn-run {
+    background: var(--emerald-green);
+    color: #0F172A;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-run:hover {
+    background: #34D399;
+    box-shadow: 0 0 16px rgba(16, 185, 129, 0.5);
+  }
+
+  textarea.code-editor {
+    width: 100%;
+    height: 230px;
+    background: transparent;
+    border: none;
+    padding: 16px;
+    color: #F8FAFC;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+    line-height: 1.5;
+  }
+
+  .console-pane {
+    background: #05070C;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 16px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+  }
+
+  .console-title {
+    color: var(--navy-muted);
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .console-out {
+    color: var(--emerald-green);
+    white-space: pre-wrap;
+  }
+
+  /* ---------- SECTION 4: SKILLS GRID ---------- */
+  #skills {
+    padding: 80px 0;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .skills-matrix {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .skill-card {
+    background: var(--slate-card);
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .skill-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .progress-bg {
+    height: 8px;
+    background: var(--slate-bg);
+    border-radius: 100px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-sky), var(--emerald-green));
+    border-radius: 100px;
+  }
+
+  .tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 36px;
+  }
+
+  .tech-pill {
+    background: var(--slate-card);
+    border: 1px solid var(--border-light);
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--navy-dark);
+    box-shadow: var(--shadow-soft);
+  }
+
+  /* ---------- SECTION 5: MILESTONE TIMELINE ---------- */
+  #timeline {
+    padding: 80px 0;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .timeline-list {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 32px;
+    border-left: 2px solid rgba(2, 132, 199, 0.2);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -39px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent-sky);
+    box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.2);
+  }
+
+  .timeline-year {
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--accent-sky-dark);
+    margin-bottom: 4px;
+  }
+
+  .timeline-item h4 {
+    font-size: 1.15rem;
+    color: var(--navy-dark);
+    margin-bottom: 4px;
+  }
+
+  .timeline-item p {
+    color: var(--navy-muted);
+    font-size: 0.92rem;
+  }
+
+  /* ---------- SECTION 6: CONTACT FORM ---------- */
+  #contact {
+    padding: 80px 0;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .contact-card {
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contact-form {
+    text-align: left;
+    margin-top: 28px;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--navy-dark);
+    margin-bottom: 6px;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+    background: var(--slate-card);
+    color: var(--navy-dark);
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .form-input:focus {
+    border-color: var(--accent-sky);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+  }
+
+  textarea.form-input {
+    resize: vertical;
+    min-height: 110px;
+  }
+
+  .form-toast {
+    display: none;
+    margin-top: 16px;
+    padding: 12px 20px;
+    background: var(--accent-sky);
+    color: #FFF;
+    border-radius: 12px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    padding: 32px 0;
+    text-align: center;
+    border-top: 1px solid var(--border-light);
+    color: var(--navy-muted);
+    font-size: 0.88rem;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 860px) {
+    .hero-grid, .lab-box, .skills-matrix, .bento-grid {
+      grid-template-columns: 1fr;
+    }
+    .bento-card.featured { grid-column: span 1; }
+    .hero-tech h1 { font-size: 2.5rem; }
+    nav.nav-dock { border-radius: 20px; flex-direction: column; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="container">
+  <nav class="nav-dock">
+    <div class="nav-pills">
+      <a href="#top">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#lab">Code Lab</a>
+      <a href="#skills">Skills</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO (FRESH 2-COLUMN TECH DECK LAYOUT) -->
+  <section class="hero-tech container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="status-tag">
+          <span class="pulse-dot"></span> GRADE 11 STEM EXPLORER &bull; ONLINE
+        </div>
+        <h1>Building <span>Intelligent AI</span> &amp; Robotics Logic</h1>
+        <div style="margin-bottom: 12px;"><span class="note-handwritten">⚡ "exploring code &amp; building projects line by line!"</span></div>
+        <p class="hero-lead">Hi, I'm Arnav Chel. I spend my high school days and free evenings writing neural networks, tuning microcontroller motor loops, and building open STEM tools.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-tech btn-sky">Explore Projects &gt;</a>
+          <a href="#contact" class="btn-tech btn-ghost">Send Feedback</a>
+        </div>
+      </div>
+
+      <!-- RIGHT TECH DECK WITH PHOTO & INTERACTIVE CLI -->
+      <div class="hero-visual">
+        <div class="deck-card">
+          <div class="deck-head">
+            <div class="dots">
+              <span class="dot d-red"></span>
+              <span class="dot d-yellow"></span>
+              <span class="dot d-green"></span>
+            </div>
+            <span class="deck-title">arnav@workbench:~$</span>
+          </div>
+
+          <div class="deck-photo-wrap">
+            <img src="arnav.png" alt="Arnav Chel Student Photo">
+            <div class="deck-user-info">
+              <h4>Arnav Chel</h4>
+              <p>&gt; Grade 11 Student Developer</p>
+            </div>
+          </div>
+
+          <div class="terminal-box">
+            <div class="term-line">Welcome to <span class="highlight">Arnav's Tech Deck</span> v3.0</div>
+            <div class="term-line">Type '<span class="cmd">help</span>' or '<span class="cmd">projects</span>' in CLI...</div>
+            <div class="term-line" id="cliHistory"></div>
+            <div class="term-input-line">
+              <span class="term-prompt">&gt;</span>
+              <input type="text" class="term-input" id="cliInput" placeholder="type 'help' and press Enter..." autocomplete="off">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: BENTO GRID PROJECTS (COMPLETELY UNIQUE STRUCTURE!) -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge">// STEM &amp; CODING WORK</span>
+        <h2>Featured Learning Projects</h2>
+        <p>A mix of school assignments, science fair entries, and code practice pieces.</p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Featured Bento Card -->
+        <div class="bento-card featured">
+          <div>
+            <div class="bento-tag">Machine Learning &bull; Python / PyTorch</div>
+            <h3>NeuroStudy AI Engine</h3>
+            <p>An adaptive study assistant that analyzes textbook chapters, generates review quizzes, and predicts student focus drop-off points.</p>
+          </div>
+          <div class="bento-footer">
+            <span>🏆 State Science Fair 1st Place</span>
+            <span style="color: var(--accent-sky-dark);">Python Code &gt;</span>
+          </div>
+        </div>
+
+        <!-- Bento Card 2 -->
+        <div class="bento-card">
+          <div>
+            <div class="bento-tag">Robotics &bull; C++ / Arduino</div>
+            <h3>RoboRover X1</h3>
+            <p>Autonomous rover equipped with ultrasonic lidar sensors and PID motor speed control.</p>
+          </div>
+          <div class="bento-footer">
+            <span>Hardware Project</span>
+            <span style="color: var(--accent-sky-dark);">Details &gt;</span>
+          </div>
+        </div>
+
+        <!-- Bento Card 3 -->
+        <div class="bento-card">
+          <div>
+            <div class="bento-tag">Compiler &bull; Node.js</div>
+            <h3>EcoCode AST Linter</h3>
+            <p>Syntax tree linter analyzing JS code to trim redundant loops and save CPU cycles.</p>
+          </div>
+          <div class="bento-footer">
+            <span>Hackathon Winner</span>
+            <span style="color: var(--accent-sky-dark);">GitHub &gt;</span>
+          </div>
+        </div>
+
+        <!-- Bento Card 4 -->
+        <div class="bento-card featured">
+          <div>
+            <div class="bento-tag">Web Graphics &bull; JS Canvas</div>
+            <h3>QuantumMath Vector Visualizer</h3>
+            <p>Real-time 2D &amp; 3D vector field renderer built from scratch using raw HTML5 Canvas matrix math.</p>
+          </div>
+          <div class="bento-footer">
+            <span>Web Application</span>
+            <span style="color: var(--accent-sky-dark);">Try Live &gt;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: LIVE CODE RUNNER LAB (COMPLETELY NEW CONCEPT!) -->
+  <section id="lab">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge">// INTERACTIVE EXPERIMENT</span>
+        <h2>Live Code Runner Sandbox</h2>
+        <p>Edit and execute Arnav's JavaScript algorithm snippet live in your browser!</p>
+      </div>
+
+      <div class="lab-box">
+        <div class="editor-pane">
+          <div class="editor-header">
+            <span class="editor-title">⚡ student_algorithm.js</span>
+            <button class="btn-run" id="runCodeBtn">Execute Script &gt;</button>
+          </div>
+          <textarea class="code-editor" id="codeEditor">// Edit and test Arnav's algorithm live!
+function evaluateStudentCode(name, score) {
+    console.log("Analyzing candidate: " + name);
+    console.log("STEM Dedication Score: " + score + "/100");
+    console.log("Result: PASS &bull; Excellent Logic!");
+}
+
+evaluateStudentCode("Arnav Chel", 100);
+</textarea>
+        </div>
+
+        <div class="console-pane">
+          <div class="console-title">&gt;_ Real-time Console Log</div>
+          <div class="console-out" id="consoleOut">Click "Execute Script &gt;" to see live output...</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: TECHNICAL SKILLS MATRIX -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge">// COMPETENCIES</span>
+        <h2>Skills &amp; Practice Progress</h2>
+        <p>Current hands-on progress across programming languages and logic.</p>
+      </div>
+
+      <div class="skills-matrix">
+        <div class="skill-card">
+          <div class="skill-top">
+            <span>Python &amp; Machine Learning</span>
+            <span style="color: var(--accent-sky-dark);">95%</span>
+          </div>
+          <div class="progress-bg"><div class="progress-fill" style="width: 95%;"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-top">
+            <span>JavaScript &amp; Web Development</span>
+            <span style="color: var(--accent-sky-dark);">90%</span>
+          </div>
+          <div class="progress-bg"><div class="progress-fill" style="width: 90%;"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-top"><span>C++ &amp; Microcontrollers</span><span style="color: var(--accent-sky-dark);">85%</span></div>
+          <div class="progress-bg"><div class="progress-fill" style="width: 85%;"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-top"><span>Algorithms &amp; Data Structures</span><span style="color: var(--accent-sky-dark);">88%</span></div>
+          <div class="progress-bg"><div class="progress-fill" style="width: 88%;"></div></div>
+        </div>
+      </div>
+
+      <div class="tech-pills">
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">PyTorch</span>
+        <span class="tech-pill">JavaScript</span>
+        <span class="tech-pill">C++</span>
+        <span class="tech-pill">Arduino</span>
+        <span class="tech-pill">Node.js</span>
+        <span class="tech-pill">VS Code</span>
+        <span class="tech-pill">Git</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: MILESTONE TIMELINE (NEW UNIQUE CONCEPT!) -->
+  <section id="timeline">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge">// LEARNING JOURNEY</span>
+        <h2>STEM Milestones &amp; History</h2>
+        <p>Key learning highlights from middle school to Grade 11.</p>
+      </div>
+
+      <div class="timeline-list">
+        <div class="timeline-item">
+          <div class="timeline-year">2026 &bull; Grade 11</div>
+          <h4>State Science Fair AI Winner</h4>
+          <p>Awarded 1st place for NeuroStudy AI student adaptive quiz engine concept.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2025 &bull; Grade 9</div>
+          <h4>High School Hackathon Innovation Award</h4>
+          <p>Built EcoCode AST Linter tool to trim redundant compiler loops during test builds.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2024 &bull; Grade 8</div>
+          <h4>Robotics &amp; C++ Hardware Exploration</h4>
+          <p>Custom-soldered circuit boards and programmed RoboRover autonomous ultrasonic navigation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: CONTACT FORM -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <span class="section-badge">// STUDENT CONNECT</span>
+        <h2>Share Your Advice &amp; Feedback</h2>
+        <p style="color: var(--navy-muted);">I'd love to hear your advice, suggestions, or feedback on my school STEM projects!</p>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="contactName">Your Name</label>
+            <input type="text" id="contactName" class="form-input" placeholder="Enter your name..." required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail">Your Email</label>
+            <input type="email" id="contactEmail" class="form-input" placeholder="Enter your email address..." required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage">Feedback / Message</label>
+            <textarea id="contactMessage" class="form-input" placeholder="Write your advice or feedback here..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-tech btn-sky" style="width: 100%; justify-content: center;">Send Feedback &gt;</button>
+
+          <div class="form-toast" id="formToast">
+            ✓ Thank you! Your feedback has been sent to Arnav.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">&copy; 2026 Arnav. Made for a school STEM design project.</div>
+</footer>
+
+<script>
+  // Interactive CLI Simulator
+  const cliInput = document.getElementById('cliInput');
+  const cliHistory = document.getElementById('cliHistory');
+  if (cliInput && cliHistory) {
+    cliInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const val = cliInput.value.trim().toLowerCase();
+        cliInput.value = '';
+        let reply = '';
+        if (val === 'help') {
+          reply = 'Available: projects, lab, skills, timeline, clear';
+        } else if (val === 'projects') {
+          reply = 'NeuroStudy AI, RoboRover X1, EcoCode Linter, QuantumMath';
+        } else if (val === 'skills') {
+          reply = 'Python (95%), JS (90%), C++ (85%), Logic (88%)';
+        } else if (val === 'timeline') {
+          reply = '2026: Science Fair Winner | 2025: Hackathon | 2024: Robotics';
+        } else if (val === 'clear') {
+          cliHistory.innerHTML = '';
+          return;
+        } else if (val === '') {
+          return;
+        } else {
+          reply = `Command '${val}' not recognized. Type 'help' for commands.`;
+        }
+
+        const div = document.createElement('div');
+        div.className = 'term-line';
+        div.innerHTML = `<span class="cmd">&gt; ${val}</span><br><span class="highlight">${reply}</span>`;
+        cliHistory.appendChild(div);
+      }
+    });
+  }
+
+  // Live Code Editor Runner
+  const runCodeBtn = document.getElementById('runCodeBtn');
+  const codeEditor = document.getElementById('codeEditor');
+  const consoleOut = document.getElementById('consoleOut');
+  if (runCodeBtn && codeEditor && consoleOut) {
+    runCodeBtn.addEventListener('click', () => {
+      let logs = [];
+      const mockConsole = {
+        log: function(...args) { logs.push(args.join(' ')); }
+      };
+      try {
+        const fn = new Function('console', codeEditor.value);
+        fn(mockConsole);
+        consoleOut.innerHTML = logs.length > 0 ? logs.join('<br>') : 'Executed cleanly.';
+      } catch (err) {
+        consoleOut.innerHTML = `<span style="color:#EF4444;">Error: ${err.message}</span>`;
+      }
+    });
+  }
+
+  // Contact Form Handler
+  const contactForm = document.getElementById('contactForm');
+  const formToast = document.getElementById('formToast');
+  if (contactForm && formToast) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formToast.style.display = 'block';
+      contactForm.reset();
+      setTimeout(() => {
+        formToast.style.display = 'none';
+      }, 4000);
+    });
+  }
+</script>
+
+</body>
+</html>
